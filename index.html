@@ -5,128 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boys Guard | প্রিমিয়াম আন্ডারওয়্যার</title>
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;700&display=swap" rel="stylesheet">
-   <style> /* New Large Image Gallery Styling */
-        .product-gallery {
-            width: 100%;
-            margin-bottom: 20px;
-        }
-
-        .product-gallery img {
-            width: 100%; /* Puro container jure thakbe */
-            height: auto; /* Ratio thik rakhbe */
-            display: block;
-            margin-bottom: 15px; /* Protiti chobir majhe gap */
-            border-radius: 8px; /* Chobir kona gulo halka round */
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Halka shadow */
-        }
+    <style>
+        body { font-family: 'Hind Siliguri', sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; }
+        header { background: #000; color: #fff; text-align: center; padding: 20px; font-size: 30px; font-weight: bold; text-transform: uppercase; }
+        .top-notice { background: #e63946; color: #fff; text-align: center; padding: 10px; font-weight: bold; }
+        .container { max-width: 600px; margin: auto; background: #fff; padding: 15px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
         
-        /* Header & Offer Bar */
-        .top-bar { background: #e63946; color: #fff; text-align: center; padding: 10px; font-weight: bold; }
-        header { text-align: center; padding: 20px; background: #000; color: #fff; font-size: 28px; text-transform: uppercase; }
-
-        /* Social Proof Alert */
-        .view-alert { background: #fff3cd; color: #856404; padding: 10px; border-radius: 5px; margin: 10px 0; font-size: 14px; text-align: center; }
-
-        /* Image Gallery */
-        .main-img { width: 100%; border-radius: 8px; }
-        .thumb-container { display: flex; gap: 5px; margin-top: 10px; overflow-x: auto; }
-        .thumb-container img { width: 80px; height: 80px; object-fit: cover; cursor: pointer; border: 2px solid #ddd; border-radius: 5px; }
-
-        /* Price & Stock */
-        .price-box { text-align: center; margin: 20px 0; }
-        .old-price { text-decoration: line-through; color: #888; font-size: 18px; }
-        .new-price { color: #e63946; font-size: 30px; font-weight: bold; }
-        .stock-alert { color: #d9534f; font-weight: bold; font-size: 14px; margin-top: 5px; }
-
-        /* Form Styling */
-        .form-section { background: #f9f9f9; padding: 20px; border: 2px solid #eee; border-radius: 10px; margin-top: 20px; }
-        .form-section h3 { margin-top: 0; text-align: center; }
-        input, select, textarea { width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
+        /* Boro Image Gallery */
+        .product-gallery img { width: 100%; height: auto; border-radius: 8px; margin-bottom: 15px; display: block; }
         
-        .order-btn { background: #ff4500; color: #fff; width: 100%; padding: 18px; border: none; border-radius: 5px; font-size: 20px; font-weight: bold; cursor: pointer; margin-top: 10px; }
-        .call-btn { display: block; background: #25d366; color: #fff; text-align: center; padding: 15px; text-decoration: none; border-radius: 5px; margin-top: 15px; font-weight: bold; }
+        .price-card { background: #fff5f5; padding: 20px; border-radius: 8px; border: 1px solid #ffcccc; text-align: center; margin: 20px 0; }
+        .old-price { text-decoration: line-through; color: #777; font-size: 20px; }
+        .new-price { color: #e63946; font-size: 35px; font-weight: bold; display: block; }
+        .view-alert { background: #fff3cd; color: #856404; padding: 10px; border-radius: 5px; text-align: center; margin-bottom: 15px; }
 
-        /* Popups */
-        .overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 9999; justify-content: center; align-items: center; }
-        .popup { background: #fff; padding: 25px; border-radius: 10px; width: 85%; max-width: 400px; text-align: center; position: relative; }
-        .close-btn { position: absolute; top: 10px; right: 10px; font-size: 20px; cursor: pointer; }
+        /* Form */
+        .form-box { background: #f9f9f9; padding: 20px; border-radius: 10px; border: 1px solid #ddd; }
+        input, select { width: 100%; padding: 15px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; font-size: 16px; }
+        .order-btn { background: #e63946; color: #fff; width: 100%; padding: 20px; border: none; border-radius: 5px; font-size: 22px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+        .order-btn:hover { background: #c12e3a; }
+        .call-btn { display: block; background: #25d366; color: #fff; text-align: center; padding: 15px; text-decoration: none; border-radius: 5px; margin-top: 15px; font-weight: bold; font-size: 20px; }
     </style>
 </head>
 <body>
 
-<div class="top-bar">ধামাকা অফার! ৩৯৯ টাকায় ১ সেট (৩ পিস)</div>
+<div class="top-notice">🔥 সীমিত সময়ের অফার! ৩৯৯ টাকায় ১ সেট (৩ পিস)</div>
 <header>Boys Guard</header>
 
 <div class="container">
-    <div class="view-alert">🔥 বর্তমানে ২০+ লোক এই প্রোডাক্টটি দেখছেন!</div>
+    <div class="view-alert">👀 বর্তমানে ২০+ লোক এই প্রোডাক্টটি দেখছেন!</div>
 
-   <div class="product-gallery">
-        <img src="https://scontent.fdac183-1.fna.fbcdn.net/v/t39.30808-6/657363635_122107302074384740_5174565293077104559_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeFApdq7xxqG12TaAXOH12Wzelb8XeqB4Sx6Vvxd6oHhLJWlXRJqXC6-4jfy-_QR1RssI96d6NMszqUlQ7pLa9qI&_nc_ohc=l9x596RiuJ4Q7kNvwEfzRL0&_nc_oc=AdqG5DDBgORy_Ly0j4SVP9Htf828LEjIFev7RMc7oZT43zm3-AT57IhFahIohuDcHXk&_nc_zt=23&_nc_ht=scontent.fdac183-1.fna&_nc_gid=CvnhzOi0H41ZY4WxnzHiEA&_nc_ss=7a3a8&oh=00_Af0wBfYTvbPLmZVZO05zwJGGNXtPbd2X4Zp8n2burvggJw&oe=69E317A6" alt="Boys Guard Premium Underwear - 1">
-        
-        <img src="https://scontent.fdac183-1.fna.fbcdn.net/v/t39.30808-6/657475410_122107301990384740_3347600214081485893_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeFduINZIanqD_pbP8z6W1DTZbHXAMLkUQNlsdcAwuRRA9hbr_MkIv-LtROWT3RSTmJt4WDOAKiWmv_Jm9aDoivU&_nc_ohc=HU9GNBBIbUgQ7kNvwHPMGkR&_nc_oc=AdqpXKZDMnS14QrXaFLp4k5t6FGWcMPREpgK3YjKls33Z86bLCQ4DH3pWu5JdFM4w6Y&_nc_zt=23&_nc_ht=scontent.fdac183-1.fna&_nc_gid=CvnhzOi0H41ZY4WxnzHiEA&_nc_ss=7a3a8&oh=00_Af0yzVYw8TWm_uPChZByR0j9x6dqX1UaakFSX2LliRe7Xw&oe=69E30AB6" alt="Boys Guard Premium Underwear - 2">
-        
-        <img src="https://scontent.fdac183-1.fna.fbcdn.net/v/t39.30808-6/658125175_122107301930384740_1333179212776249875_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeFDCGQthrtVo6Mb91HOGfsXjmQ2Fr9rIMqOZDYWv2sgyosEs8MLrZO6OftWU_2R94HCfAcfwg9JrkTDneU19B-f&_nc_ohc=_si-yiGG06wQ7kNvwENW9mA&_nc_oc=Adrl7wIFw6RvNirndTwUe7_kPxwOnJJFjZwcJ4p3p5i3xH0i8aFso24XDt9fgRWsfME&_nc_zt=23&_nc_ht=scontent.fdac183-1.fna&_nc_gid=CvnhzOi0H41ZY4WxnzHiEA&_nc_ss=7a3a8&oh=00_Af0fd-X7mFi3TSDzHW9EF1G2-6ptjWj0nvqpLFtFsV_c7w&oe=69E31873" alt="Boys Guard Premium Underwear - 3">
-        
-        </div>
-    ```
-
-
-    <div class="price-box">
-        <span class="old-price">পূর্বের মূল্য: ৬০০ টাকা</span><br>
-        <span class="new-price">অফার মূল্য: ৩৯৯ টাকা</span>
-        <div class="stock-alert">⚠️ মাত্র অল্প কিছু স্টক বাকি আছে!</div>
+    <div class="product-gallery">
+        <img src="https://scontent.fdac183-1.fna.fbcdn.net/v/t39.30808-6/657363635_122107302074384740_5174565293077104559_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeFApdq7xxqG12TaAXOH12Wzelb8XeqB4Sx6Vvxd6oHhLJWlXRJqXC6-4jfy-_QR1RssI96d6NMszqUlQ7pLa9qI&_nc_ohc=l9x596RiuJ4Q7kNvwEfzRL0&_nc_oc=AdqG5DDBgORy_Ly0j4SVP9Htf828LEjIFev7RMc7oZT43zm3-AT57IhFahIohuDcHXk&_nc_zt=23&_nc_ht=scontent.fdac183-1.fna&_nc_gid=CvnhzOi0H41ZY4WxnzHiEA&_nc_ss=7a3a8&oh=00_Af0wBfYTvbPLmZVZO05zwJGGNXtPbd2X4Zp8n2burvggJw&oe=69E317A6" alt="Boys Guard Underwear 1">
+        <img src="https://scontent.fdac183-1.fna.fbcdn.net/v/t39.30808-6/657475410_122107301990384740_3347600214081485893_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeFduINZIanqD_pbP8z6W1DTZbHXAMLkUQNlsdcAwuRRA9hbr_MkIv-LtROWT3RSTmJt4WDOAKiWmv_Jm9aDoivU&_nc_ohc=HU9GNBBIbUgQ7kNvwHPMGkR&_nc_oc=AdqpXKZDMnS14QrXaFLp4k5t6FGWcMPREpgK3YjKls33Z86bLCQ4DH3pWu5JdFM4w6Y&_nc_zt=23&_nc_ht=scontent.fdac183-1.fna&_nc_gid=CvnhzOi0H41ZY4WxnzHiEA&_nc_ss=7a3a8&oh=00_Af0yzVYw8TWm_uPChZByR0j9x6dqX1UaakFSX2LliRe7Xw&oe=69E30AB6" alt="Boys Guard Underwear 2">
+        <img src="https://scontent.fdac183-1.fna.fbcdn.net/v/t39.30808-6/658125175_122107301930384740_1333179212776249875_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeFDCGQthrtVo6Mb91HOGfsXjmQ2Fr9rIMqOZDYWv2sgyosEs8MLrZO6OftWU_2R94HCfAcfwg9JrkTDneU19B-f&_nc_ohc=_si-yiGG06wQ7kNvwENW9mA&_nc_oc=Adrl7wIFw6RvNirndTwUe7_kPxwOnJJFjZwcJ4p3p5i3xH0i8aFso24XDt9fgRWsfME&_nc_zt=23&_nc_ht=scontent.fdac183-1.fna&_nc_gid=CvnhzOi0H41ZY4WxnzHiEA&_nc_ss=7a3a8&oh=00_Af0fd-X7mFi3TSDzHW9EF1G2-6ptjWj0nvqpLFtFsV_c7w&oe=69E31873" alt="Boys Guard Underwear 3">
     </div>
 
-    <div class="form-section">
-        <h3>অর্ডার করতে ফর্মটি পূরণ করুন</h3>
-       <form id="orderForm">
-    <input type="text" name="name" placeholder="আপনার নাম" required>
-    <input type="tel" name="phone" placeholder="মোবাইল নম্বর" required>
-    
-    <select name="size" required>
-        <option value="M">M</option>
-        <option value="L">L</option>
-        <option value="XL">XL</option>
-        <option value="XXL">XXL</option>
-    </select>
+    <div class="price-card">
+        <span class="old-price">পূর্বের মূল্য: ৬০০ টাকা</span>
+        <span class="new-price">অফার মূল্য: ৩৯৯ টাকা</span>
+        <p style="color: red; font-weight: bold;">⚠️ মাত্র অল্প কিছু স্টক বাকি আছে!</p>
+    </div>
 
-    <input type="text" name="area" placeholder="এলাকা/গ্রাম" required>
-    <input type="text" name="thana" placeholder="থানা" required>
-    <input type="text" name="district" placeholder="জেলা" required>
+    <div class="form-box">
+        <h3 style="text-align: center;">অর্ডার করতে নিচের ফর্মটি পূরণ করুন</h3>
+        <form id="orderForm">
+            <input type="text" name="name" placeholder="আপনার নাম" required>
+            <input type="tel" name="phone" placeholder="মোবাইল নম্বর" required>
+            
+            <select name="size" required>
+                <option value="">সাইজ সিলেক্ট করুন</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+            </select>
 
-    <select name="delivery" required>
-        <option value="Inside Dhaka">ঢাকার ভিতরে (৬০ টাকা)</option>
-        <option value="Outside Dhaka">ঢাকার বাইরে (৮০ টাকা)</option>
-    </select>
+            <input type="text" name="area" placeholder="এলাকা / গ্রাম / রাস্তা নম্বর" required>
+            <input type="text" name="thana" placeholder="থানা" required>
+            <input type="text" name="district" placeholder="জেলা" required>
 
-    <button type="submit">অর্ডার কনফার্ম করুন</button>
-</form>
+            <select name="delivery" required>
+                <option value="Inside Dhaka">ঢাকার ভিতরে (৬০ টাকা)</option>
+                <option value="Outside Dhaka">ঢাকার বাইরে (৮০ টাকা)</option>
+            </select>
+
+            <button type="submit" class="order-btn" id="submitBtn">অর্ডার কনফার্ম করুন</button>
+        </form>
         <a href="tel:01872720582" class="call-btn">📞 সরাসরি কল করুন</a>
     </div>
 </div>
 
-<div id="numberOverlay" class="overlay">
-    <div class="popup">
-        <span class="close-btn" onclick="document.getElementById('numberOverlay').style.display='none'">×</span>
-        <h3>স্পেশাল অফার পেতে আপনার নম্বর দিন!</h3>
-        <input type="tel" id="popupPhone" placeholder="আপনার নম্বর লিখুন">
-        <button class="order-btn" onclick="submitPopup()">অফারটি নিন</button>
-    </div>
-</div>
-
 <script>
-    // Google Sheets URL eikhane boshaben
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbygtaghg15FnJw456sdqDbpGR79ElRCUBDjRYITNxk1Lhpfh44DTlOosLfSs028mw/exec');
+    // Apnar Apps Script URL eikhane bosiyechi
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxhby7E7OBTyNpJDlXuhnlmvPPfvt4fruaMA7LXfAFv6hPBqQIP0xA6OszE_Vw1rzTD/exec';
+    const form = document.getElementById('orderForm');
+    const btn = document.getElementById('submitBtn');
 
     form.addEventListener('submit', e => {
-        e.preventDefault();
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(res => {
-            alert('ধন্যবাদ! আপনার অর্ডারটি সফল হয়েছে। আমরা শীঘ্রই আপনার সাথে যোগাযোগ করবো।');
+      e.preventDefault();
+      btn.disabled = true;
+      btn.innerText = "অর্ডার প্রসেসিং হচ্ছে...";
+
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            alert('ধন্যবাদ! আপনার অর্ডারটি সফলভাবে গ্রহণ করা হয়েছে। আমরা শীঘ্রই যোগাযোগ করবো।');
             form.reset();
+            btn.disabled = false;
+            btn.innerText = "অর্ডার কনফার্ম করুন";
         })
-        .catch(err => {
-            alert('দুঃখিত, আবার চেষ্টা করুন।');
-            console.error('Error!', err.message);
+        .catch(error => {
+            alert('দুঃখিত! আবার চেষ্টা করুন।');
+            btn.disabled = false;
+            btn.innerText = "অর্ডার কনফার্ম করুন";
         });
     });
+</script>
+
+</body>
+</html>
