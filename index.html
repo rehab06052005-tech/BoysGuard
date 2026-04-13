@@ -6,212 +6,136 @@
     <title>Boys Guard | প্রিমিয়াম আন্ডারওয়্যার</title>
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Hind Siliguri', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-        }
+        body { font-family: 'Hind Siliguri', sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        .container { max-width: 600px; margin: auto; background: #fff; padding: 15px; border-radius: 8px; }
+        
+        /* Header & Offer Bar */
+        .top-bar { background: #e63946; color: #fff; text-align: center; padding: 10px; font-weight: bold; }
+        header { text-align: center; padding: 20px; background: #000; color: #fff; font-size: 28px; text-transform: uppercase; }
 
-        /* Top Bar */
-        .top-notice {
-            background: #e63946;
-            color: #fff;
-            text-align: center;
-            padding: 8px;
-            font-size: 14px;
-        }
+        /* Social Proof Alert */
+        .view-alert { background: #fff3cd; color: #856404; padding: 10px; border-radius: 5px; margin: 10px 0; font-size: 14px; text-align: center; }
 
-        header {
-            background: #fff;
-            padding: 15px;
-            text-align: center;
-            border-bottom: 2px solid #eee;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+        /* Image Gallery */
+        .main-img { width: 100%; border-radius: 8px; }
+        .thumb-container { display: flex; gap: 5px; margin-top: 10px; overflow-x: auto; }
+        .thumb-container img { width: 80px; height: 80px; object-fit: cover; cursor: pointer; border: 2px solid #ddd; border-radius: 5px; }
 
-        .logo {
-            font-size: 28px;
-            font-weight: bold;
-            color: #1a1a1a;
-            text-transform: uppercase;
-        }
+        /* Price & Stock */
+        .price-box { text-align: center; margin: 20px 0; }
+        .old-price { text-decoration: line-through; color: #888; font-size: 18px; }
+        .new-price { color: #e63946; font-size: 30px; font-weight: bold; }
+        .stock-alert { color: #d9534f; font-weight: bold; font-size: 14px; margin-top: 5px; }
 
-        .container {
-            max-width: 600px;
-            margin: auto;
-            background: #fff;
-            padding: 15px;
-        }
+        /* Form Styling */
+        .form-section { background: #f9f9f9; padding: 20px; border: 2px solid #eee; border-radius: 10px; margin-top: 20px; }
+        .form-section h3 { margin-top: 0; text-align: center; }
+        input, select, textarea { width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
+        
+        .order-btn { background: #ff4500; color: #fff; width: 100%; padding: 18px; border: none; border-radius: 5px; font-size: 20px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+        .call-btn { display: block; background: #25d366; color: #fff; text-align: center; padding: 15px; text-decoration: none; border-radius: 5px; margin-top: 15px; font-weight: bold; }
 
-        .product-title {
-            font-size: 22px;
-            font-weight: bold;
-            color: #333;
-            margin: 15px 0;
-            line-height: 1.4;
-        }
-
-        .image-box img {
-            width: 100%;
-            border-radius: 8px;
-        }
-
-        /* Price Section */
-        .price-card {
-            background: #fff5f5;
-            padding: 15px;
-            border-radius: 8px;
-            border: 1px solid #ffcccc;
-            margin: 20px 0;
-            text-align: center;
-        }
-
-        .old-price {
-            text-decoration: line-through;
-            color: #777;
-            font-size: 18px;
-        }
-
-        .new-price {
-            color: #e63946;
-            font-size: 32px;
-            font-weight: bold;
-            display: block;
-        }
-
-        /* Order Form */
-        .form-box {
-            background: #fff;
-            border: 2px solid #1a1a1a;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 25px;
-        }
-
-        .form-box h3 {
-            margin-top: 0;
-            text-align: center;
-            color: #1a1a1a;
-        }
-
-        input, select {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            box-sizing: border-box;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        .order-btn {
-            background: #e63946;
-            color: #fff;
-            width: 100%;
-            padding: 18px;
-            border: none;
-            border-radius: 5px;
-            font-size: 20px;
-            font-weight: bold;
-            cursor: pointer;
-            text-transform: uppercase;
-            box-shadow: 0 4px 10px rgba(230, 57, 70, 0.3);
-        }
-
-        .call-btn {
-            display: block;
-            background: #25d366;
-            color: #fff;
-            text-align: center;
-            padding: 15px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 15px;
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        .badges {
-            display: flex;
-            justify-content: space-around;
-            margin: 20px 0;
-            font-size: 13px;
-            color: #555;
-        }
-
-        .badge-item { text-align: center; }
+        /* Popups */
+        .overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 9999; justify-content: center; align-items: center; }
+        .popup { background: #fff; padding: 25px; border-radius: 10px; width: 85%; max-width: 400px; text-align: center; position: relative; }
+        .close-btn { position: absolute; top: 10px; right: 10px; font-size: 20px; cursor: pointer; }
     </style>
 </head>
 <body>
 
-<div class="top-notice">🔥 সীমিত সময়ের অফার! দ্রুত অর্ডার করুন।</div>
-
-<header>
-    <div class="logo">Boys Guard</div>
-</header>
+<div class="top-bar">ধামাকা অফার! ৩৯৯ টাকায় ১ সেট (৩ পিস)</div>
+<header>Boys Guard</header>
 
 <div class="container">
-    <div class="image-box">
-        <img src="https://via.placeholder.com/600x600?text=Boys+Guard+Product" alt="Boys Guard Underwear">
+    <div class="view-alert">🔥 বর্তমানে ২০+ লোক এই প্রোডাক্টটি দেখছেন!</div>
+
+    <img src="MAIN_IMAGE_LINK" id="main-display" class="main-img">
+    <div class="thumb-container">
+        <img src="https://scontent.fdac183-1.fna.fbcdn.net/v/t39.30808-6/657363635_122107302074384740_5174565293077104559_n
+            .jpg?_nc_cat=103&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeFApdq7xxqG12
+            TaAXOH12Wzelb8XeqB4Sx6Vvxd6oHhLJWlXRJqXC6-4jfy-_QR1RssI96d6NMszqU
+            lQ7pLa9qI&_nc_ohc=l9x596RiuJ4Q7kNvwEfzRL0&_nc_oc=AdqG5DDBgORy_Ly0j4SVP9Htf82
+            8LEjIFev7RMc7oZT43zm3-AT57IhFahIohuDcHXk&_nc_zt=23&_nc_ht=scontent.fdac183-1.fna&_nc_gid=WWIRH_
+            2ndHqpfMfbv9_Fkg&_nc_ss=7a3a8&oh=00_Af3kXQh0ZYLLOueAHKFVmoci48l19Lc9zQPQoG_pOtXcwg&oe=69E317A6" onclick="document.getElementById('main-display').src=this.src">
+        <img src="https://scontent.fdac183-1.fna.fbcdn.net/v/t39.30808-6/658125175_122107301930384740_1333179212776249875_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeFDCGQthrtVo6Mb91HOGfsXjmQ2Fr9rIMqOZDYWv2sgyosEs8MLrZO6OftWU_2R94HCfAcfwg9JrkTDneU19B-f&_nc_ohc=_si-yiGG06wQ7kNvwENW9mA&_nc_oc=Adrl7wIFw6RvNirndTwUe7_kPxwOnJJFjZwcJ4p3p5i3xH0i8aFso24XDt9fgRWsfME&_nc_zt=23&_nc_ht=scontent.fdac183-1.fna&_nc_gid=GLX54QXY76KlOv
+            d6JB17Lg&_nc_ss=7a3a8&oh=00_Af0JcOxcrtkWfO-j9wSTCrq-j78JIx7slthXLGx9SNWsSQ&oe=69E31873" onclick="document.getElementById('main-display').src=this.src">
+        <img src="Ihttps://scontent.fdac183-1.fna.fbcdn.net/v/t39.30808-6/657475410_122107301990384740_3347600214081485893_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeFduINZIanqD_pbP8z6W1DTZbHXAMLkUQNlsdcAwuRRA9hbr_MkIv-LtROWT3RSTmJt4WDOAKiWmv_Jm9aDoivU&_nc_ohc=HU9GNBBIbUgQ7kNvwHPMGkR&_nc_oc=AdqpXKZDMnS14QrXaFLp4k5t6FGWcMPREpgK3YjKls33Z86bLCQ4DH3pWu5JdFM4w6Y&_nc_zt=23&_nc_ht=scontent.fdac183-1.fna&_nc_gid=Vv1Dg6WzSnkT8KTtkQXUuw&_nc_ss=7a
+            3a8&oh=00_Af1Ew-mmDmreEOxYIu8hWDm7k6RSvUS7SaDv-jofc0woxQ&oe=69E30AB63" onclick="document.getElementById('main-display').src=this.src">
+        <img src="" onclick="document.getElementById('main-display').src=this.src">
+        <img src="IMG_LINK_5" onclick="document.getElementById('main-display').src=this.src">
     </div>
 
-    <div class="product-title">
-        প্রিমিয়াম কোয়ালিটির কমফোর্ট আন্ডারওয়্যার - ১ সেট (৩ পিস)
-    </div>
-
-    <div class="price-card">
-        <span class="old-price">পূর্বের মূল্য: ৬০০ টাকা</span>
+    <div class="price-box">
+        <span class="old-price">পূর্বের মূল্য: ৬০০ টাকা</span><br>
         <span class="new-price">অফার মূল্য: ৩৯৯ টাকা</span>
+        <div class="stock-alert">⚠️ মাত্র অল্প কিছু স্টক বাকি আছে!</div>
     </div>
 
-    <div class="badges">
-        <div class="badge-item">✅ ক্যাশ অন ডেলিভারি</div>
-        <div class="badge-item">✅ প্রিমিয়াম কোয়ালিটি</div>
-        <div class="badge-item">✅ দ্রুত ডেলিভারি</div>
-    </div>
-
-    <div style="background: #eee; padding: 10px; border-radius: 5px; font-size: 15px;">
-        🚚 <b>ডেলিভারি চার্জ:</b> ঢাকার ভিতরে ৬০ টাকা, ঢাকার বাইরে ৮০ টাকা।
-    </div>
-
-    <div class="form-box">
-        <h3>অর্ডার করতে নিচের ফর্মটি পূরণ করুন</h3>
+    <div class="form-section">
+        <h3>অর্ডার করতে ফর্মটি পূরণ করুন</h3>
         <form id="orderForm">
-            <label>আপনার নাম *</label>
-            <input type="text" name="name" placeholder="আপনার নাম লিখুন" required>
+            <input type="text" name="name" placeholder="আপনার নাম" required>
+            <input type="tel" name="phone" placeholder="আপনার মোবাইল নম্বর" required>
             
-            <label>মোবাইল নম্বর *</label>
-            <input type="tel" name="phone" placeholder="০১৭XXXXXXXX" required>
-            
-            <label>পূর্ণ ঠিকানা *</label>
-            <input type="text" name="address" placeholder="গ্রাম/মহল্লা, থানা, জেলা" required>
-            
-            <label>ডেলিভারি এরিয়া *</label>
-            <select name="location" required>
+            <select name="size" required>
+                <option value="">সাইজ সিলেক্ট করুন</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+            </select>
+
+            <input type="text" name="area" placeholder="এলাকা / গ্রাম / রাস্তা নম্বর" required>
+            <input type="text" name="thana" placeholder="থানা" required>
+            <input type="text" name="district" placeholder="জেলা" required>
+
+            <select name="delivery" required>
                 <option value="Dhaka">ঢাকার ভিতরে (৬০ টাকা)</option>
                 <option value="Outside">ঢাকার বাইরে (৮০ টাকা)</option>
             </select>
 
             <button type="submit" class="order-btn">অর্ডার কনফার্ম করুন</button>
         </form>
-        
         <a href="tel:01872720582" class="call-btn">📞 সরাসরি কল করুন</a>
     </div>
 </div>
 
+<div id="numberOverlay" class="overlay">
+    <div class="popup">
+        <span class="close-btn" onclick="document.getElementById('numberOverlay').style.display='none'">×</span>
+        <h3>স্পেশাল অফার পেতে আপনার নম্বর দিন!</h3>
+        <input type="tel" id="popupPhone" placeholder="আপনার নম্বর লিখুন">
+        <button class="order-btn" onclick="submitPopup()">অফারটি নিন</button>
+    </div>
+</div>
+
 <script>
-    const scriptURL = 'YOUR_GOOGLE_SHEET_SCRIPT_URL'
-    const form = document.getElementById('orderForm')
+    // Google Sheets URL eikhane boshaben
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxhby7E7OBT
+        yNpJDlXuhnlmvPPfvt4fruaMA7LXfAFv6hPBqQIP0xA6OszE_Vw1rzTD/exec';
+    const form = document.getElementById('orderForm');
 
     form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => alert('ধন্যবাদ! আপনার অর্ডারটি সফলভাবে গ্রহণ করা হয়েছে। আমরা শীঘ্রই যোগাযোগ করবো।'))
-        .catch(error => alert('দুঃখিত, আবার চেষ্টা করুন!'))
-    })
+        e.preventDefault();
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(res => alert('ধন্যবাদ! আপনার অর্ডারটি সফল হয়েছে।'))
+        .catch(err => alert('আবার চেষ্টা করুন।'));
+    });
+
+    // 20 Second por auto number popup
+    setTimeout(() => {
+        document.getElementById('numberOverlay').style.display = 'flex';
+    }, 20000);
+
+    function submitPopup() {
+        let pNum = document.getElementById('popupPhone').value;
+        if(pNum) {
+            alert('ধন্যবাদ! আমরা আপনার সাথে যোগাযোগ করবো।');
+            document.getElementById('numberOverlay').style.display = 'none';
+        } else {
+            alert('দয়া করে নম্বর দিন।');
+        }
+    }
 </script>
 
 </body>
