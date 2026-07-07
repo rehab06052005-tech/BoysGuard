@@ -11,7 +11,7 @@
 
     <!-- 1. Top Offer Bar -->
     <div class="bg-red-600 text-white text-xs tracking-widest text-center py-2 font-bold uppercase">
-        ⚡ Order Now for Fast Delivery Across Bangladesh ⚡
+        ⚡ Order Now for Fast Delivery Across Bangladesh (No WhatsApp Required) ⚡
     </div>
 
     <!-- 2. Header / Navigation -->
@@ -29,23 +29,14 @@
         </div>
     </header>
 
-    <!-- 3. Hero Section -->
-    <section class="relative bg-gradient-to-b from-[#1a1a1a] to-[#121212] py-16 px-4 text-center">
-        <div class="max-w-3xl mx-auto">
-            <span class="text-red-600 text-xs font-extrabold tracking-widest uppercase block mb-3">Engineered for Ultimate Comfort</span>
-            <h1 class="text-4xl sm:text-5xl font-black tracking-tight text-white uppercase mb-4">
-                Premium Breathable Boxer Briefs
-            </h1>
-            <p class="text-sm text-gray-400 mb-8 max-w-lg mx-auto font-light">
-                Made with ultra-soft waistband and anti-chafing fabric for maximum comfort.
-            </p>
+    <!-- 3. Main Product Bundles Section -->
+    <section id="bundles" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-black uppercase tracking-tight text-white">Select Your Pack</h2>
+            <p class="text-xs text-gray-500 mt-2 uppercase tracking-widest">Click Order Now to fill the simple form below</p>
         </div>
-    </section>
 
-    <!-- 4. Product Bundles Section -->
-    <section id="bundles" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
             <!-- Product 1: 1 Piece Premium -->
             <div class="bg-[#1a1a1a] p-6 rounded-2xl border border-gray-800 flex flex-col justify-between">
                 <div>
@@ -54,9 +45,7 @@
                     <p class="text-xs text-red-500 mt-1">High-End Luxury Fabric</p>
                 </div>
                 <div class="mt-6">
-                    <div class="flex justify-between items-center mb-4">
-                        <span class="text-2xl font-black text-white">300 TK</span>
-                    </div>
+                    <div class="text-2xl font-black text-white mb-4">300 TK</div>
                     <a href="#checkout-section" onclick="selectProduct('Premium Edition (1 Piece)', 300)" class="w-full text-center bg-transparent border-2 border-gray-700 hover:border-white text-white text-xs font-black tracking-widest uppercase py-4 rounded-xl transition block">
                         Order Now
                     </a>
@@ -72,9 +61,7 @@
                     <p class="text-xs text-gray-400 mt-1">Assorted Modern Colors</p>
                 </div>
                 <div class="mt-6">
-                    <div class="flex justify-between items-center mb-4">
-                        <span class="text-2xl font-black text-white">299 TK</span>
-                    </div>
+                    <div class="text-2xl font-black text-white mb-4">299 TK</div>
                     <a href="#checkout-section" onclick="selectProduct('Smart Savings Pack (2 Pcs)', 299)" class="w-full text-center bg-red-600 hover:bg-red-700 text-white text-xs font-black tracking-widest uppercase py-4 rounded-xl transition block">
                         Order Now
                     </a>
@@ -89,69 +76,72 @@
                     <p class="text-xs text-green-500 mt-1">Best Budget Deal</p>
                 </div>
                 <div class="mt-6">
-                    <div class="flex justify-between items-center mb-4">
-                        <span class="text-2xl font-black text-white">399 TK</span>
-                    </div>
+                    <div class="text-2xl font-black text-white mb-4">399 TK</div>
                     <a href="#checkout-section" onclick="selectProduct('Mega Value Pack (3 Pcs)', 399)" class="w-full text-center bg-white text-black text-xs font-black tracking-widest uppercase py-4 rounded-xl transition block">
                         Order Now
                     </a>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <!-- 5. Automated One-Page Checkout Section -->
-    <section id="checkout-section" class="max-w-3xl mx-auto px-4 py-16">
+    <!-- 4. Direct Fast Checkout Form Section -->
+    <section id="checkout-section" class="max-w-3xl mx-auto px-4 py-8 mb-16">
         <div class="bg-[#1a1a1a] p-8 rounded-2xl border border-gray-800">
-            <h2 class="text-2xl font-black uppercase tracking-tight text-white mb-6 text-center text-red-600">Fast Checkout Form</h2>
+            <h2 class="text-2xl font-black uppercase tracking-tight text-white mb-6 text-center text-red-600">Fast Order Form</h2>
             
-            <!-- Form to Email Integration via Formspree -->
-            <form action="https://formspree.io/f/rehab06052005@gmail.com" method="POST" onsubmit="saveCustomerToCookies()">
+            <!-- Forms System linked with your unique key -->
+            <form action="https://api.web3forms.com/submit" method="POST" onsubmit="saveCustomerToCookies()">
                 
-                <!-- Selected Product Details (Hidden Inputs for Form Submission) -->
+                <!-- YOUR ACTUAL ACCESS KEY LOADED HERE -->
+                <input type="hidden" name="access_key" value="7f98f51b-e8e4-4357-948f-5605d7545c60">
+                <input type="hidden" name="subject" value="New Order Received - Boy's Guard">
+                <input type="hidden" name="replyto" id="hidden-replyto">
+                
+                <!-- Automatically returns back to page or Facebook Page after successful order -->
+                <input type="hidden" name="redirect" value="https://www.facebook.com/profile.php?id=61561542226653">
+
+                <!-- Selected Product Box -->
                 <div class="mb-6 p-4 bg-black rounded-xl border border-gray-800">
-                    <p class="text-xs uppercase tracking-widest text-gray-500">Selected Product:</p>
-                    <input type="text" id="display-product" name="Product" class="bg-transparent font-bold text-lg text-white w-full border-none focus:outline-none" readonly value="Please click 'Order Now' above">
-                    <input type="hidden" id="hidden-price" name="Base Price" value="0">
+                    <p class="text-xs uppercase tracking-widest text-gray-500">Selected Item:</p>
+                    <input type="text" id="display-product" name="Ordered_Product" class="bg-transparent font-bold text-lg text-white w-full border-none focus:outline-none" readonly required value="Please choose a product above">
+                    <input type="hidden" id="hidden-price" value="0">
                 </div>
 
-                <!-- Customer Info Inputs -->
+                <!-- Customer Details Inputs -->
                 <div class="space-y-4">
                     <div>
-                        <label class="block text-xs uppercase tracking-widest text-gray-400 mb-2 font-bold">Full Name *</label>
-                        <input type="text" id="cust-name" name="Customer Name" required class="w-full bg-black border border-gray-800 rounded-xl p-4 text-white focus:border-red-600 focus:outline-none">
+                        <label class="block text-xs uppercase tracking-widest text-gray-400 mb-2 font-bold">Your Name *</label>
+                        <input type="text" id="cust-name" name="Customer_Name" required class="w-full bg-black border border-gray-800 rounded-xl p-4 text-white focus:border-red-600 focus:outline-none">
                     </div>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
-                            <label class="block text-xs uppercase tracking-widest text-gray-400 mb-2 font-bold">Phone Number *</label>
-                            <input type="tel" id="cust-phone" name="Phone Number" required class="w-full bg-black border border-gray-800 rounded-xl p-4 text-white focus:border-red-600 focus:outline-none">
+                            <label class="block text-xs uppercase tracking-widest text-gray-400 mb-2 font-bold">Mobile Number *</label>
+                            <input type="tel" id="cust-phone" name="Phone_Number" required class="w-full bg-black border border-gray-800 rounded-xl p-4 text-white focus:border-red-600 focus:outline-none">
                         </div>
                         <div>
                             <label class="block text-xs uppercase tracking-widest text-gray-400 mb-2 font-bold">Email Address *</label>
-                            <input type="email" id="cust-email" name="Customer Email" required class="w-full bg-black border border-gray-800 rounded-xl p-4 text-white focus:border-red-600 focus:outline-none">
+                            <input type="email" id="cust-email" name="Customer_Email" oninput="document.getElementById('hidden-replyto').value=this.value" required class="w-full bg-black border border-gray-800 rounded-xl p-4 text-white focus:border-red-600 focus:outline-none">
                         </div>
                     </div>
                     <div>
                         <label class="block text-xs uppercase tracking-widest text-gray-400 mb-2 font-bold">Full Delivery Address *</label>
-                        <textarea id="cust-address" name="Delivery Address" required rows="3" class="w-full bg-black border border-gray-800 rounded-xl p-4 text-white focus:border-red-600 focus:outline-none"></textarea>
+                        <textarea id="cust-address" name="Delivery_Address" required rows="3" class="w-full bg-black border border-gray-800 rounded-xl p-4 text-white focus:border-red-600 focus:outline-none"></textarea>
                     </div>
 
-                    <!-- Size Selection -->
                     <div class="grid grid-cols-2 gap-4">
                         <div>
-                            <label class="block text-xs uppercase tracking-widest text-gray-400 mb-2 font-bold">Select Size *</label>
-                            <select name="Underwear Size" required class="w-full bg-black border border-gray-800 rounded-xl p-4 text-white focus:border-red-600 focus:outline-none">
+                            <label class="block text-xs uppercase tracking-widest text-gray-400 mb-2 font-bold">Size *</label>
+                            <select name="Size" required class="w-full bg-black border border-gray-800 rounded-xl p-4 text-white focus:border-red-600 focus:outline-none">
                                 <option value="M">M (Waist 28-30)</option>
                                 <option value="L">L (Waist 32-34)</option>
                                 <option value="XL">XL (Waist 36-38)</option>
                                 <option value="XXL">XXL (Waist 40-42)</option>
                             </select>
                         </div>
-                        <!-- Delivery Option -->
                         <div>
-                            <label class="block text-xs uppercase tracking-widest text-gray-400 mb-2 font-bold">Delivery Area *</label>
-                            <select id="delivery-zone" name="Delivery Zone" required onchange="updateTotalCost()" class="w-full bg-black border border-gray-800 rounded-xl p-4 text-white focus:border-red-600 focus:outline-none">
+                            <label class="block text-xs uppercase tracking-widest text-gray-400 mb-2 font-bold">Delivery Zone *</label>
+                            <select id="delivery-zone" name="Delivery_Zone" required onchange="updateTotalCost()" class="w-full bg-black border border-gray-800 rounded-xl p-4 text-white focus:border-red-600 focus:outline-none">
                                 <option value="50">Inside Dhaka (50 TK)</option>
                                 <option value="80">Outside Dhaka (80 TK)</option>
                             </select>
@@ -159,33 +149,28 @@
                     </div>
                 </div>
 
-                <!-- Live Bill Summary -->
+                <!-- Total Bill Section -->
                 <div class="mt-8 pt-6 border-t border-gray-800 flex justify-between items-center">
-                    <span class="text-sm font-bold uppercase tracking-widest text-gray-400">Total Bill (with Delivery):</span>
+                    <span class="text-sm font-bold uppercase tracking-widest text-gray-400">Total Bill:</span>
                     <span id="total-bill" class="text-3xl font-black text-red-600">0 TK</span>
-                    <input type="hidden" id="hidden-total" name="Total Bill Amount" value="0">
+                    <input type="hidden" id="hidden-total" name="Total_Bill_Amount" value="0">
                 </div>
 
-                <!-- Final Submit Button -->
+                <!-- Final Order Button -->
                 <button type="submit" class="mt-6 w-full bg-red-600 hover:bg-red-700 text-white text-sm font-black tracking-widest uppercase py-5 rounded-xl transition shadow-xl shadow-red-950 flex items-center justify-center space-x-2">
-                    <i class="fa-solid fa-circle-check"></i>
-                    <span>Confirm Order (Cash on Delivery)</span>
+                    <i class="fa-solid fa-bolt"></i>
+                    <span>Place Order (Cash on Delivery)</span>
                 </button>
             </form>
         </div>
     </section>
 
-    <!-- 6. Footer -->
-    <footer class="bg-black py-8 text-center border-t border-gray-900">
-        <div class="mb-4">
-            <a href="https://www.facebook.com/profile.php?id=61561542226653" target="_blank" class="text-gray-500 hover:text-blue-500 transition mx-2 text-xl">
-                <i class="fa-brands fa-facebook"></i>
-            </a>
-        </div>
-        <p class="text-[10px] text-gray-600 tracking-widest uppercase">&copy; 2026 Boy's Guard Innerwear. All Rights Reserved.</p>
+    <!-- 5. Footer -->
+    <footer class="bg-black py-6 text-center border-t border-gray-900 text-[10px] text-gray-600 uppercase tracking-widest">
+        &copy; 2026 Boy's Guard Innerwear. Fast & Secure Order Engine.
     </footer>
 
-    <!-- JavaScript Engine for Calculations and Cookies -->
+    <!-- JS Calculations & Storage -->
     <script>
         function selectProduct(name, price) {
             document.getElementById('display-product').value = name;
@@ -206,33 +191,21 @@
             document.getElementById('hidden-total').value = total + " TK";
         }
 
-        // Save system using LocalStorage (Modern cookie replacement for forms)
         function saveCustomerToCookies() {
-            let name = document.getElementById('cust-name').value;
-            let phone = document.getElementById('cust-phone').value;
-            let email = document.getElementById('cust-email').value;
-            let address = document.getElementById('cust-address').value;
-
-            localStorage.setItem('bg_name', name);
-            localStorage.setItem('bg_phone', phone);
-            localStorage.setItem('bg_email', email);
-            localStorage.setItem('bg_address', address);
+            localStorage.setItem('bg_name', document.getElementById('cust-name').value);
+            localStorage.setItem('bg_phone', document.getElementById('cust-phone').value);
+            localStorage.setItem('bg_email', document.getElementById('cust-email').value);
+            localStorage.setItem('bg_address', document.getElementById('cust-address').value);
         }
 
-        // Auto-load data when customer enters the web again
         function checkSavedCustomerData() {
-            if(localStorage.getItem('bg_name')) {
-                document.getElementById('cust-name').value = localStorage.getItem('bg_name');
-            }
-            if(localStorage.getItem('bg_phone')) {
-                document.getElementById('cust-phone').value = localStorage.getItem('bg_phone');
-            }
+            if(localStorage.getItem('bg_name')) document.getElementById('cust-name').value = localStorage.getItem('bg_name');
+            if(localStorage.getItem('bg_phone')) document.getElementById('cust-phone').value = localStorage.getItem('bg_phone');
             if(localStorage.getItem('bg_email')) {
                 document.getElementById('cust-email').value = localStorage.getItem('bg_email');
+                document.getElementById('hidden-replyto').value = localStorage.getItem('bg_email');
             }
-            if(localStorage.getItem('bg_address')) {
-                document.getElementById('cust-address').value = localStorage.getItem('bg_address');
-            }
+            if(localStorage.getItem('bg_address')) document.getElementById('cust-address').value = localStorage.getItem('bg_address');
         }
     </script>
 </body>
